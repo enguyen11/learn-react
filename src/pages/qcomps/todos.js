@@ -12,10 +12,13 @@ const person = {
 export default function TodoList() {
   return (
     <div style={person.theme}>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
       <h1>Person Name's Todos</h1>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
       <img className="avatar"
-      src="baseURL + imageID + imageSize + .jpg"
-      alt="Person's Name"
+      src={baseUrl + person.imageId + person.imageSize + '.jpg'}
+      //      src={`${baseUrl} ${person.imageId} ${person.imageSize} ${'.jpg'}`}
+      alt={person.name}
       />
     </div>
   );

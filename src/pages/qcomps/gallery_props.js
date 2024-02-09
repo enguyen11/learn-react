@@ -1,7 +1,38 @@
+function Profile({scientist, size=100}) {
+  return (
+      <section className="profile">
+        <h2>{scientist.name}</h2>
+      <img
+          className="avatar"
+          src={'https://i.imgur.com/' + person.imageId + 's.jpg'}
+          alt={person.name}
+          width={size}
+          height={size}
+      />
+      <ul>
+        <li>
+          <b>Profession: </b>
+          {scientist.profession}
+        </li>
+        <li>
+          <b>Awards: {scientists.award.split} </b>
+          {scientist.awards}
+        </li>
+        <li>
+          <b>Discovered: </b>
+          {scientist.discovery}
+        </li>
+      </ul>
+      </section>
+  );
+}
+
+
 export default function Gallery() {
   return (
     <div>
       <h1>Notable Scientists</h1>
+
       <section className="profile">
         <h2>Maria Skłodowska-Curie</h2>
         <img
@@ -26,6 +57,8 @@ export default function Gallery() {
           </li>
         </ul>
       </section>
+
+
       <section className="profile">
         <h2>Katsuko Saruhashi</h2>
         <img
