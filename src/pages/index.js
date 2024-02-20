@@ -12,12 +12,20 @@ import AvatarProfile from 'src/pages/components/profile_props'
 import GalleryProps from 'src/pages/qcomps/gallery_props'
 import Square from 'src/pages/components/square'
 import PackingList from 'src/pages/qcomps/props_item'
+import ShoppingCart from 'src/pages/qcomps/shoppingCart'
+import Form from 'src/pages/qcomps/updObjectsForm'
+import Artist from 'src/pages/qcomps/artistsRemoveArr'
+import BucketList from "@/pages/qcomps/arrObj";
 
 
 
 export default function Home() {
   return (
     <div className={styles.main}>
+        <BucketList/>
+        <Artist/>
+        <Form/>
+        <ShoppingCart/>
         <PackingList />
         <Square />
         <GalleryProps />

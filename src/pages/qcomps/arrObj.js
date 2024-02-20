@@ -7,17 +7,22 @@ const initialList = [
   { id: 2, title: 'Terracotta Army', seen: true },
 ];
 
+//Make a deep copy to decouple objects
 export default function BucketList() {
   const [myList, setMyList] = useState(initialList);
   const [yourList, setYourList] = useState(
-    initialList
+    initialList.map((i) => {
+        return {...i}
+    })
   );
 
   function handleToggleMyList(artworkId, nextSeen) {
     const tmpList = myList.map(e => {
         if (e.id === artworkId) {
             e.seen = nextSeen
+            //return {...e, seen: nextSeen}
         }
+        //else
         return e
     });
     setMyList(tmpList);

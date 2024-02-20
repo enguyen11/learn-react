@@ -7,8 +7,10 @@ export default function Scoreboard() {
     score: 10,
   });
 
+  //Does not rerender when we click the button, it rerenders when we create a new player
   function handlePlusClick() {
-    player.score++;
+    setPlayer({...player, score: player.score++});
+    //player.score++;
   }
 
   function handleFirstNameChange(e) {
@@ -20,6 +22,7 @@ export default function Scoreboard() {
 
   function handleLastNameChange(e) {
     setPlayer({
+      ...player,
       lastName: e.target.value
     });
   }
